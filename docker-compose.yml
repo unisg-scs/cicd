@@ -41,3 +41,4 @@ services:
       - "traefik.http.routers.app.tls=true"
       - "traefik.http.routers.app.entryPoints=web,websecure"
       - "traefik.http.routers.app.tls.certresolver=le"
+
