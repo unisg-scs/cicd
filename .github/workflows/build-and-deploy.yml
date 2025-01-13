@@ -46,7 +46,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         port: 22
         key: ${{ secrets.SSH_PRIVATE_KEY }}  
-        source: "/home/runner/work/cicd/cicd/workspace/*"
+        source: "/home/runner/work/cicd/cicd/*"
         target: "/home/${{ secrets.SSH_USER }}/"
         strip_components: 1
         rm: false
@@ -60,7 +60,7 @@ jobs:
         PORT: 22
         KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /home/${{ secrets.SSH_USER }}/
+          cd /home/${{ secrets.SSH_USER }}/workspace/
           mkdir ./letsencrypt/acme.json
           touch ./letsencrypt/acme.json
           sudo chmod 0600 ./letsencrypt/acme.json
