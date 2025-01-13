@@ -35,7 +35,7 @@ services:
       - ./:/data/
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`app.${PUB_IP}.nip.io`)"
+      - "traefik.http.routers.app.rule=Host(`app.${PUB_IP}.defaultproject.ch`)"
       - "traefik.http.routers.app.service=app"
       - "traefik.http.services.app.loadbalancer.server.port=8080"
       - "traefik.http.routers.app.tls=true"
