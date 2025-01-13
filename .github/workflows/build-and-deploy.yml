@@ -46,7 +46,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         port: 22
         key: ${{ secrets.SSH_PRIVATE_KEY }}  
-        source: "/home/runner/work/cicd/cicd/*"
+        source: "/home/runner/work/cicd/cicd/workspace/*"
         target: "/home/${{ secrets.SSH_USER }}/"
         strip_components: 1
         rm: false
