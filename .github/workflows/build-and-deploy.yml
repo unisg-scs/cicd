@@ -61,7 +61,7 @@ jobs:
         KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /home/${{ secrets.SSH_USER }}/workspace/
-          mkdir ./letsencrypt/acme.json
+          mkdir ./letsencrypt
           touch ./letsencrypt/acme.json
           sudo chmod 0600 ./letsencrypt/acme.json
           sudo docker-compose down --remove-orphans
